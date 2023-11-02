@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+
+* {
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Irish Grover';
+    /* font-size:10px; */
+    box-sizing: border-box;
+}
+
+#container{
+    background-color: rgba(0, 0, 0, 0.4);
+    height:200vh;
+}
+body {
+    background-position: top;
+    background-size: 100vw 200vh;
+}
+
+/* ----- the top section css */
+/* change the height of this id if you want to take the header down */
+#top-section 
+{
+    height: 12vh;    min-height:40px;
+    width: 100vw;    min-width:786x;
+    gap: 20%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#top-section>*{
+    font-style: normal;
+    font-weight: 400;
+}
+.landingpage-logo {
+    color: #ffffff;
+    font-family: 'Irish Grover';    
+    font-size: 2.5rem;
+    padding-left: 40px;
+    width: 50%;
+    min-width:250px;
+}
+
+#nav-links{
+    gap:10%;
+    width:30vw;
+    min-width:320px;
+    margin-right: 3vw;
+}
+
+.nav {
+    /* width: 200%; */
+    height:100%;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.nav:hover {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
+
+/* ----- the top section css */
+/* change the height of this id if you want to take the header down */
+#top-section 
+{
+    height: 12vh;    min-height:40px;
+    width: 100vw;    min-width:786x;
+    gap: 20%;
+}
+
+#top-section>*{
+    font-style: normal;
+    font-weight: 400;
+}
+.landingpage-logo {
+    color: #ffffff;
+    font-family: 'Irish Grover';    
+    font-size: 2.5rem;
+    padding-left: 40px;
+    width: 50%;
+    min-width:250px;
+}
+
+#nav-links{
+    gap:10%;
+    width:30vw;
+    min-width:320px;
+    margin-right: 3vw;
+}
+
+.nav {
+    /* width: 200%; */
+    height:100%;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.nav:hover {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
+
+/* ---- the middle section css ---- */
+#middle-section {
+    height: 85vh;
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 111.53%);
+    opacity: 0.8;
+}
+.welcome-section {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 3.12rem;
+    padding-top: 40px;
+}
+
+.welcome-section-description {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Irish Grover';
+    font-weight: 400;
+    font-size: 1.9rem;
+    padding-top: 20px;
+
+}
+
+button {
+    background-color: #FFB800;
+    text-align: center;
+    width: fit-content;
+    padding: 8px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    margin-left: 680px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* ---- the games section css */
+.landingpage-bottom-section {
+    height: 100vh;
+    background-color: black;
+    opacity: 0.8;
+    color:white;
+}
+h3{
+    text-align: center;
+    font-size:3.12rem;
+}
+#game-container{
+    display: grid;
+    margin-top:10vh;
+    row-gap: 15vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.9rem;
+    text-transform:capitalize ;
+}
+.game>img{
+    width:var(--image-dim);
+    height:var(--image-dim);
+}

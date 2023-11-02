@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block metadata %}
+<link rel="stylesheet" href="{% static 'css/login_page.css' %}">
+{% endblock metadata %}
+{% block body %}      <div id="heading">
+    Login to Query Quest 
+</div>
+
+<div id="container">
+    <form method="post"  action="{% url 'Games:login' %}">
+        
+        {% csrf_token %}
+  
+        <label>Username</label>
+        <input name="username" class="input_box" type="text">
+        <label>Password</label>
+        <input name="password" class="input_box" type="password">
+        <input type="submit"  value="Log in" id="submit_box">
+    </form>
+</div>
+{% endblock body %}

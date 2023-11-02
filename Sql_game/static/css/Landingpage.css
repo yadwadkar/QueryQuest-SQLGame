@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten&family=Gorditas&family=Irish+Grover&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Irish Grover';
+    font-size: 10px;
+    box-sizing: border-box;
+    --image-dim: 25vh;
+    /*change this to change the size of game images*/
+}
+
+
+#container {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 200vh;
+}
+
+/* ----- the top section css */
+/* change the height of this id if you want to take the header down */
+#top-section {
+    height: 12vh;    min-height: 40px;
+    width: 100vw;    min-width: 786x;
+    gap: 20%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#top-section>* {
+    font-style: normal;
+    font-weight: 400;
+}
+
+.landingpage-logo {
+    color: #ffffff;
+    font-family: 'Irish Grover';
+    font-size: 4rem;
+    padding-left: 40px;
+    width: 50%;
+    min-width: 250px;
+}
+
+#nav-links {
+    gap: 10%;
+    width: 30vw;
+    min-width: 320px;
+    margin-right: 3vw;
+}
+
+.nav {
+    width: 200%;
+    height: 100%;
+    font-size: 2rem;
+    color: white;
+}
+
+.nav:hover {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
+
+/* ----- the top section css */
+/* change the height of this id if you want to take the header down */
+#top-section {
+    height: 12vh;
+    min-height: 40px;
+    width: 100vw;
+    min-width: 786x;
+    gap: 20%;
+}
+
+#top-section>* {
+    font-style: normal;
+    font-weight: 400;
+}
+
+.landingpage-logo {
+    color: #ffffff;
+    font-family: 'Irish Grover';
+    font-size: 4rem;
+    padding-left: 40px;
+    width: 50%;
+    min-width: 250px;
+}
+
+
+/* ---- the middle section css ---- */
+#middle-section {
+    height: 50vh;
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 111.53%);
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#middle-section>button{
+    width:fit-content;
+}
+.welcome-section {
+    color: #ffffff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 5.5rem;
+    padding-top: 40px;
+}
+
+.welcome-section-description {
+    color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 300;
+line-height: 120%; /* 1.5rem */
+
+}
+
+button {
+    background-color: #FFB800;
+    text-align: center;
+    width: fit-content;
+    padding: 8px;
+    width: 250px;
+    height: 60px;
+    flex-shrink: 0;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    /* margin-left: 680px;
+    margin-top: 20px; */
+    align-items: center;
+    font-size: 2.1rem;
+}
+.img{
+    width:70vw;
+    height: 55vh;
+    align-self:center;
+    position:relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/* ---- the games section css */
+/* .landingpage-bottom-section {
+    height: 100vh;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
+} */
+
+h3 {
+    text-align: center;
+    font-size: 5rem;
+    color: #ffffff;
+    padding-top: 12px;
+}
+
+/* #game-container {
+    display: grid;
+    margin-top: 10vh;
+    width:100vw;
+    row-gap: 15vh;  column-gap:15vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+
+.game>img {
+    width: var(--image-dim);
+    height: var(--image-dim);
+} */
+
+
+
+.landingpage-bottom-section {
+    text-align: center;
+    background-color: #000000;
+    padding: 15px;
+    height: 100vh;
+}
+
+.landingpage-card-item {
+    text-align: center;
+    background-color:#F7EDD4;
+    width: 234px;
+    height: 234px;
+    border-radius: 9px;
+    margin: 30px;
+}
+
+.landingpage-card-image {
+    height: 150px;
+    width: 200px;
+}
+.landingpage-card-image:hover{
+    transform: scale(1.05); /* Scale the image slightly on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a shadow on hover */
+}
+
+
+.landingpage-card-name {
+    color: #000000;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 8px;
+}
+
+.landingpage-card-price {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* 
+* {
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Irish Grover';
+    font-size:10px;
+    box-sizing: border-box;
+}
+
+#container{
+    background-color: rgba(0, 0, 0, 0.4);
+    height:100vh;
+}
+
+body {
+    background: local url("bgimg.jpeg");
+    background-position: top;
+    background-size: 100vw 200vh;
+}
+
+#top-section 
+{
+    height: 12vh;    min-height:40px;
+    width: 100vw;    min-width:786x;
+    gap: 20%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#top-section>*{
+    font-style: normal;
+    font-weight: 400;
+}
+
+.landingpage-logo {
+    color: #ffffff;
+    font-family: 'Irish Grover';    
+    font-size: 4rem;
+    padding-left: 40px;
+    width: 50%;
+    min-width:250px;
+}
+
+#middle-section{
+    height: 85vh;
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 111.53%);
+    opacity: 0.8;
+}
+
+.Learn-with-us{
+    color: #ffffff;
+    font-family: 'Irish Grover';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    padding-left: 760px;
+    padding-top: 49px;
+    
+}
+.nav {
+     width: 200%; 
+    height:100%;
+    font-size: 2rem;
+    color: white;
+}
+
+#nav-links{
+    gap:10%;
+    width:30vw;
+    min-width:320px;
+    margin-right: 3vw;
+}
+
+.nav:hover {
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
+
+.About-us{
+    color: #ffffff;
+    font-family: 'Irish Grover';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    padding-top: 49px;
+    padding-left: 65px;
+    padding-right: 65px;
+
+}
+
+.Sign-up{
+    color: #ffffff;
+    padding-top: 49px;
+    font-family: 'Irish Grover';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.welcome-section{
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Irish Grover';
+    font-weight: 400;
+    font-size: 50px;
+    padding-top: 40px;
+}
+
+.welcome-section-description{
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Irish Grover';
+    font-weight: 400;
+    font-size: 30px;
+    padding-top: 20px;
+    
+}
+
+button{
+    background-color:#FFB800;
+    text-align: center;
+    width: fit-content;
+    padding: 8px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    margin-left: 680px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.landingpage-bottom-section
+{
+    height:100vh;
+    background-color: black;
+    opacity: 0.8;
+} */

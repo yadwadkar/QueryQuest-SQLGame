@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block metadata %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level</title>
+    <link rel="stylesheet" href="{% static 'css/murder_mystery.css' %}">
+    <script 
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+    </script>
+{% endblock metadata %}
+
+{% block body %}
+    <nav>
+        <a href=""> score : {{ user.score }}<a></a>
+        <a href="">View ER Model</a>
+        <a href="">Hints</a>
+        
+    </nav>
+    <div id="progress-bar">
+        <div id="green"></div>
+    </div>
+    <form name="form-answer" id="form-answer" action="{% url 'Games:game' %}" method="post">
+        {% csrf_token %}
+        <p id="story">{{ story }}
+        </p>
+    
+     
+
+ 
+            <input  id="input-area" name="user_query" placeholder="to write the query" cols="30" rows="10"></input>
+            <button type="submit" name="run">Run</button>
+        
+               
+       
+        <div id="result">
+            <table>
+                
+                <thead>
+                    {% for heading in schema %}
+                    <td>{{ heading.0 }}</td>
+                    {% endfor %}
+                </thead>
+                <tbody>
+            {% for row in resulted_data %}
+                <tr>
+                    {% for item in row %}
+                    <td>{{ item }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <input id="answer" name="answer" placeholder="Answer"></input>
+        <button onclick="check()" type="submit" name="ans-button">Check</button>
+        
+    </form>
+   
+
+
+<script>
+    var currentHeight=34;// for single level
+    function check(){
+        currentHeight = currentHeight%132;
+        $("#green").css("height",currentHeight+"%");
+        currentHeight+=33;
+    }
+</script>
+{% endblock body %}

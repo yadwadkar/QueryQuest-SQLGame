@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>Welcome to the Sql Game</h1>
+        <h1>Data</h1>
+        <form method="post" action="{% url 'Games:landing page' %}">
+            {% csrf_token %}
+        <input label="Seat no"  name="Roll_no" id="roll_no">
+        <input type="submit" value="submit">
+        </form>
+        <table>
+            <thead>
+                {% for row in col %}
+                
+                <th>{{ row.0 }}</th>
+              
+                {% endfor %}
+                
+            </thead>
+        </tbody>
+            {% for item in data %}
+            <tr>
+                {% for data in item %}
+                <td>{{ data }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+        
+    
+    </body>
+</html>

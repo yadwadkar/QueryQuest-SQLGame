@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block metadata %} 
+<link rel="stylesheet" href="{% static 'css/signup.css' %} ">
+{% endblock metadata %}
+{% block body %}
+
+    <div id="heading">Welcome to Query Quest </div>
+    <form method="post" action="{% url 'Games:signup' %}">
+        {% csrf_token %}
+      
+      <label>Username
+        <input name="username" class="input_box" type="text">
+      </label>
+      <label>Email
+        <input name="email" type="email">
+      </label>
+      <label>Create Password
+        <input name="pass1" class="input_box" type="password">
+      </label>
+      <label>re-enter Password
+        <input name="pass2">
+      </label>
+      <input type="submit" value="Sign up" id="submit_box">
+      
+    </form>
+
+
+{% endblock body %}

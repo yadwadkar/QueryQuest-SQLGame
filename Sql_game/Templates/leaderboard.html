@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block metadata %}
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="{% static 'css/leaderboard.css' %}">
+
+{% endblock metadata %}
+{% block body %}
+    <!-- the body has 12 column grid -->
+    <!-- the header and nav container 12 cols and 1 row and flex-->
+    <header>
+        <h1>Query Quest</h1>
+        <!-- the nav bar-->
+        <nav>
+            <a href="">Learn with us</a>
+            <a href="">About us</a>
+            <a href="">
+                <ion-icon name="person-circle-outline"></ion-icon>
+                Profile
+            </a>
+        </nav>
+    </header>
+    <!-- the leaderboard start 5 span 4 -->
+    <!-- leaderboard grid,the text in one row, 1,icon,info have 1row -->
+    <div id="leaderboard">
+        <h1>Leader Board</h1>
+        {% for user in leaderboard %}
+        <h2>
+            <span style="color:#ffb800">
+                {{ forloop.counter }}
+            </span>
+        </h2>
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <div class="player-info">
+            <h3>{{ user.userID.username }}</h3>
+            <h4>
+                <span style="color:#ffb800">
+                    Score
+                </span>
+                {{ user.score }}
+            </h4>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- for the icon, this script is required -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+{% endblock body %}

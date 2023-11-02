@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten&family=Gorditas&family=Irish+Grover&display=swap');
+
+* 
+{
+  box-sizing: border-box;
+  margin:0px; padding: 0px;
+}
+#heading {
+  color: #FFB800;
+  font-size: 2.5rem;
+  height:20%;  padding-top:4%;
+  font-family:Irish Grover;
+  /* text-align: center; */
+}
+body {
+  height: 100vh;  width:100vw;
+  background-color: #000000;
+}
+
+body>*{
+  width: 30%; margin: 0% 35%;
+}
+.input_box {
+  width:80%;  height: 3.5rem;
+  padding:0% 5%;
+  border-radius: 10px;
+  margin:4% 10%;  margin-bottom: 10%;
+  border: 1px solid #FFB800;
+  background-color: #000000;
+  color: white;
+}
+
+#submit_box {
+  margin:0 30%;
+  font-size: 1.3rem;
+  font-family: gorditas;
+  border-radius: 10px;
+background: #FFB800;
+width: 130px;
+height: 44.574px;
+flex-shrink: 0;
+}
+
+label {
+  color: #CFCFCF;
+  font-family: Gluten;
+  margin:0% 10%;
+  font-size: 1.5rem;  font-style: normal;
+  font-weight: 400;  line-height: normal;
+}
+
+form {
+  padding-top:8%;/*change this to shift form fields*/  
+  width: 464px;
+  height: 497px;
+  border-radius: 10px;
+  background: #1F1F1F;
+}

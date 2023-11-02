@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block metadata %}
+<style>
+    div{
+        text-align:center;
+        color:white;
+        font-size:6rem;
+    }
+    body{
+        background-color: black;
+        
+    }
+    #login-text{
+        text-align:center;
+        color: white;
+        font-size:2.5 rem;
+
+    }
+    button{
+        background-color: #FFB800;
+    text-align: center;
+    padding: 8px;
+    width: 250px;
+height: 60px;
+flex-shrink: 0;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    align-items: center;
+    font-size: 2.1rem;
+
+    }
+</style>
+{% endblock metadata %}
+{% block body %}
+<div> Account Created Successfully</div>
+<div id="login-text">Login to go ahead </div>
+<a href="{% url 'Games:landing page' %}"><button>Play Games</button></a>
+{% endblock body %}

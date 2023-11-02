@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten&family=Gorditas&family=Irish+Grover&display=swap');
+/*for all html elements*/
+*{
+    margin:0;    padding:0;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 400;    line-height: 120%;    
+}
+
+/*root of the document html/head as per browser*/
+:root{
+    --gluten: 'Gluten', cursive;
+    --gorditas: 'Gorditas', serif;
+    --irish:Irish Grover;
+}
+
+/*main grid of the html*/
+body{
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows:15fr 165fr 15fr;
+    row-gap:5vh;      height:200vh;   
+    /* background-image: url("GamepageBG.jpg");
+    background-color: black;
+    background-position: center;
+    background-size: cover; */
+}
+body::after {
+    content: "";
+    background: url('murder_mysteryBG.jpg');
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;    left: 0;
+    height: 200%;    width: 100%;
+    z-index: -1;
+    /*filter: blur(2px);*/
+}
+/*the navigation bar for hints and ER*/
+nav{
+    /* grid-column: 1/span 12; */
+    height:100%;    min-height: fit-content;
+    display: flex;  
+    align-items: end;    justify-content: end;
+    gap:10%;
+    grid-column:7/span 5;
+    min-width: min-content;
+}
+
+/*all links in nav bar*/
+nav>a{
+    color: white;
+    min-width:fit-content;
+    text-decoration: none;
+    font-size: 1.25rem;    font-weight: 400;
+    font-family: var(--gorditas);
+}
+
+/*hover effect for nav links*/
+nav>a:hover{
+    text-decoration: underline;
+    box-shadow: 0px 3px rgba(255,255,255,0.6);
+}
+
+/*the container for progress bar on left*/
+#progress-bar 
+{
+    overflow: hidden;
+    height:80%;
+    background-color: black;
+    grid-column: 2/span 1;
+    width: 25%;   min-width: 30px;
+    border: 1px solid white; 
+    border-radius: 10px;
+    display: flex;    align-items: end;
+} 
+
+/*the progress indicator in the bar*/
+#green
+{
+    height: 33.33%;
+    width:100%;    min-width: 30px;
+    background: linear-gradient(360deg, rgb(23, 149, 2) 0%, rgba(23, 149, 2, 0) 139.86%);
+    transition: 1.5s;
+}
+
+/*the form to display story and get queries*/
+form{
+    grid-column:3/span 8;
+    display: flex;  flex-direction: column;
+    gap:5%;
+    align-items: center;
+}
+
+/*all of the form elements*/
+form>*{
+    width:100%; 
+    border: 1px solid white;
+    border-radius: 10px;
+    opacity: 0.9;    padding: 2% 2%;
+    background-color: #1F1F1F;
+    font-family: var(--gluten);
+    height: fit-content;
+    max-height: fit-content;   
+}
+
+/* the properties of form text*/
+form>*::placeholder,form>*
+{
+    color:rgba(255, 255, 255,0.5);
+    font-size:1.2rem;
+}
+
+/*the part to display the task/question*/
+#story 
+{
+    width: 100%;   margin-top: 5%;
+    color:black;    background: #FEF8E0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-y: auto;
+    text-overflow: ellipsis;
+    font-size:1.5rem;
+}
+
+/*to get queries as input*/
+#input-area{
+    border-radius: 0.625rem;
+    height:10%;overflow: hidden;
+    background: rgba(31, 31, 31, 0.90);
+}
+
+/*to show output for the query*/
+#result
+{
+    height:15%;    overflow-y:scroll;
+
+    text-align: center;
+}
+
+/*for input of the final answer after queries*/
+#answer
+{
+    height:10%;width:80%;
+}
+
+/*the bottom button, to submit form to backend*/
+button[type="submit"],button[type="button"]{
+    background-color: rgba(253, 184, 8,0.9);
+    color:white;    text-align: center;
+    width:25%;    padding: 1%;    height:5%;
+    font-family: var(--gorditas);
+    word-spacing: 1em;
+}
+
+form>*::selection{
+    color:red
+}
+table{
+    background-color: black;  /* Set the background to black */
+    color: white;            /* Set the text color to white */
+    border: 1px solid white;  /* Set the border to white */
+    padding: 10px;  
+    border-collapse: collapse;
+    margin: 0 auto;  
+    
+}
+table td {
+    border: 1px solid white;   /* Set border for table headers and cells */
+    padding: 5px;             /* Add padding for spacing within cells */
+}

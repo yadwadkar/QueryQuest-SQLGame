@@ -1,0 +1,138 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+    {% block metadata %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/Landingpage.css' %}">
+    
+    <style>
+        body 
+        {
+            background-color: black;
+            background-position: top;
+            background-size: 100vw 200vh;
+            
+        }
+    </style>
+{% endblock metadata %}
+
+{% block body %}
+    <div id="container">
+        <div class="landingpage-top-section d-flex align-items-center" id="top-section">
+            <h1 class="landingpage-logo">Query Quest</h1>
+            <div class="d-flex flex-row justify-content-end" id="nav-links">
+                <a class="Learn-with-us nav">Learn with us</a>
+                <a class="About-us nav">About us</a>
+                <a class="Sign-up nav" href="{% url 'Games:signup' %}">Sign up</a>
+                {% if not is_authenticated %}
+                <a class="login nav" href="{% url 'Games:login' %}">Login</a>
+                {% else %}
+                <div id="logout-modal" class="modal">
+                    <div class="modal-content">
+                        <p>Are you sure you want to log out?</p>
+                        <a href="#">Yes</a>
+                        <button id="cancel-logout">Cancel</button>
+                    </div>
+                </div>
+                {% endif %}
+                
+            </div>
+
+        </div>
+        <div class="flex-column justify-content-center align-items-center" id="middle-section">
+            <p class="welcome-section">Welcome to the world of Queries</p>
+            <p class="welcome-section-description">Test your skills solve various mysterious using <br>SQL
+                Queries </p>
+            <button>Explore Games</button>
+        </div>
+        
+        <div class="d-flex justify-content-center">
+            <img src="{% static 'images/landing_pageVisual.png' %}"
+            class="img"/>
+        </div>
+
+        <!-- <div class="landingpage-bottom-section">
+            <h3>Games</h3>
+            <div id="game-container">
+                <div class="game">The Missing Truth<img src="missing truth.jpeg"></div> 
+                <div class="game">Murder Mystery<img src="murder Mystery.jpg"></div>
+                <div class="game">Find The Theif<img src="find the theif .jpg"></div>
+                <div class="game">Jumanji<img src="Jumanji.jpg"></div>
+                <div class="game">Lock and Key<img src="lock and key.jpg"></div>
+                <div class="game">The Spy<img src="THE SPY .jpg"></div>
+        
+            </div>
+        </div> -->
+
+        <h3>Games</h3>
+        <div class="landingpage-bottom-section">
+            <div class="d-flex flex-row justify-content-center">
+                <div class="landingpage-card-item">
+                    <h1 class="landingpage-card-name">The Missing Truth</h1>
+                    <p class="landingpage-card-price">Easy</p>
+                    <a href="{% url 'Games:game' %}">
+                    <img src="{% static 'images/missing_truth.jpg' %}" class="landingpage-card-image" />
+                </a>
+                </div>
+
+                <div class="landingpage-card-item">
+                    <h1 class="landingpage-card-name">Murder Mystery</h1>
+                    <p class="landingpage-card-price">Medium</p>
+                    <img src="{% static 'images/murder Mystery.jpg' %}" class="landingpage-card-image" />
+                </div>
+
+                <div class="landingpage-card-item">
+                    <h1 class="landingpage-card-name">Find the Theif</h1>
+                    <p class="landingpage-card-price">Hard</p>
+                    <img src="{% static 'images/find the theif .jpg' %}" class="landingpage-card-image" />
+                </div>
+
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="landingpage-card-item">
+                    <h1 class="landingpage-card-name">Jumanji</h1>
+                    <p class="landingpage-card-price">Easy</p>
+                    <img src="{% static 'images/Jumanji.jpg' %}" class="landingpage-card-image" />
+                </div>
+
+                <div class="landingpage-card-item">
+                    <h1 class="landingpage-card-name">Locke and Key</h1>
+                    <p class="landingpage-card-price">Medium</p>
+                    <img src="{% static 'images/locke and key.jpg' %}" class="landingpage-card-image" />
+                </div>
+
+                <div class="landingpage-card-item">
+                    <h1 class="landingpage-card-name">The Spy</h1>
+                    <p class="landingpage-card-price">Hard</p>
+                    <img src="{% static 'images/the spy.jpg' %}" class="landingpage-card-image" />
+                </div>
+            </div>
+
+    </div>
+    <script>
+        const logoutLink = document.querySelector('.logout.nav');
+        const modal = document.getElementById('logout-modal');
+        const cancelLogoutButton = document.getElementById('cancel-logout');
+    
+        logoutLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            modal.style.display = 'block';
+        });
+    
+        cancelLogoutButton.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+    </script>
+    
+{% endblock body %}
+
